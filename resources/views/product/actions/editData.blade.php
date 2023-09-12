@@ -74,8 +74,8 @@
     <div class="container">
         <h4>Update Produk</h4>
         <form action="/product/update/{{ $produk->id }}" method="post" enctype="multipart/form-data">
-            @csrf
-            @method('PUT')
+            @csrf <!-- Token CSRF untuk keamanan -->
+            @method('PUT') <!-- Metode HTTP untuk update -->
             <label for="judulProduk">Judul Produk</label>
             <input type="text" id="judulProduk" name="judulProduk" value="{{$produk->judulProduk}}">
             <label for="deskripsi">Deskripsi</label>
@@ -88,6 +88,7 @@
             <a href="/product">Kembali</a>
         </form>
         @if (session('success'))
+        <!-- Menampilkan pesan sukses jika ada -->
         <script>
             alert("{{ session('success') }}");
             window.location.href = '/product';
