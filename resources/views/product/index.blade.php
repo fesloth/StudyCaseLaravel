@@ -117,7 +117,7 @@
                                     <td>{{ $p->judulProduk }}</td>
                                     <td>{{ $p->deskripsi }}</td>
                                     <td>{{ $p->harga }}</td>
-                                    <td><img src="/storage/{{$p->gambar}}" alt="gambar" width="80"></td>
+                                    <td><img src="storage/{{$p->gambar}}" alt="gambar" width="80"></td>
                                     <td>
                                         <a class="btn btn-info mb-3" href="/actions/editData/{{ $p->id }}"> Edit
                                             <i class="fas fa-edit"></i>
